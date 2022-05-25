@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ÜRÜN</th>
+        <th>MARKA</th>
+        <th>STOK</th>
+        <th>ALIŞ FİYAT</th>
+        <th>SATIŞ FİYAT</th>
+        <th>KATEGORİ</th>
+        <th>GÖRSEL</th>
+        <th>SİL</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UrunID</td>
+            <td>@item.UrunAd</td>
+            <td>@item.Marka</td>
+            <td>@item.Stok</td>
+            <td>@item.AlisFiyat</td>
+            <td>@item.SatisFiyat</td>
+            <td>@item.Kategori.KategoriAd</td>
+            <td>@item.UrunGorsel</td>
+            <td> <a href="/Urun/UrunAktifYap/@item.UrunID" class="btn btn-primary">Aktifleştir</a></td>
+        </tr>
+    }
+
+
+
+
+</table>

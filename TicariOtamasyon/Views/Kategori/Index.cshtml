@@ -1,0 +1,39 @@
+﻿
+
+@using TicariOtamasyon.Models.Siniflar
+@model  List<Kategori>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<table class="table table-bordered ml-1 mt-1" >
+    
+    
+    <tr>
+        <th>ID</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Kalıcı Sil</th>
+    </tr>
+    @foreach (var item in Model) //kategori guncelleniyor ama hata mesajı fırlatıyor
+        //bakılması lazım
+    {//guncellendiktensonra modelin içi boş geliyor
+    <tr>
+        <td>
+            @item.KategoriID
+        </td>
+        <td>
+           @item.KategoriAd
+        </td>
+        <td><a  href="/Kategori/KategoriSil/@item.KategoriID"class="btn btn-danger text-white">Sil</a></td>
+        <td><a href="/Kategori/KategoriGetir/@item.KategoriID" class="btn btn-info text-white">Güncelle</a></td>
+    </tr>
+    }
+
+
+</table>
+<a href="/Kategori/KategoriEkle" class="btn btn-primary">Kategori Ekle</a>

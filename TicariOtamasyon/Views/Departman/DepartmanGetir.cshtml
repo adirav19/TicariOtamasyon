@@ -1,0 +1,23 @@
+﻿
+@model TicariOtamasyon.Models.Siniflar.Departman
+
+@{
+    ViewBag.Title = "DepartmanGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Departman güncelleme</h2>
+
+@using (Html.BeginForm("DepartmanGuncelle", "Departman", FormMethod.Post))// açılan sayfa post edildikten sonra hangi actiona gideceğini yazıyor.
+
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.DepartmanAd)
+        @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.DepartmanID)
+    </div>//kategori ıd yi gizli olarak bu sayfaya taşıdık
+    <br />
+    <button class="btn btn-danger">Guncelle</button>
+
+}
+

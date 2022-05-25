@@ -1,0 +1,35 @@
+﻿@model TicariOtamasyon.Models.Siniflar.Cariler
+
+@{
+    ViewBag.Title = "YeniCari";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<h2>YeniCari</h2>
+<br />
+<form class="form-group" method="post">
+    <br />
+    @Html.LabelFor(x => x.CariAd)
+    <br />
+    @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.LabelFor(x => x.CariSoyad)
+    <br />
+    @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.LabelFor(x => x.CariSehir)
+    <br />
+    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.LabelFor(x => x.CariMail)
+    <br />
+    @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
+

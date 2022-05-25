@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>DEPARTMAN</th>
+        <th>DURUM</th>
+        <th>GÜNCELLE</th>
+        <th>DETAY</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DepartmanID</td>
+            <td>@item.DepartmanAd</td>
+            <td><a href="/Departman/Aktiflestir/@item.DepartmanID" class="btn btn-danger">Aktifleştir</a></td>
+            <td><a href="#" class="btn btn-danger">Güncelle</a></td>
+            <td><a href="#" class="btn btn-info">Git</a></td>
+
+
+        </tr>
+    }
+
+</table>
